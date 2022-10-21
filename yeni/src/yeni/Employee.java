@@ -1,3 +1,5 @@
+
+
 package yeni;
 import java.util.*;
 
@@ -68,7 +70,7 @@ public class Employee {
 		  else if(workYear > 19) {
 			  
 			  
-			  raiseQuantity = (salary - tax() + bonus()) * 0.19;
+			  raiseQuantity = (salary - tax() + bonus()) * 0.15;
 			  
 		  }
 		  
@@ -86,7 +88,7 @@ public class Employee {
 		  
 		  if(workHours> 40) {
 			  
-			  bonusQuantity = ((workHours - 40) * 30)*4;
+			  bonusQuantity = ((workHours - 40) * 30);
 			  
 			 
 		  }
@@ -125,8 +127,10 @@ public class Employee {
 	 
 	 public String toString() {
 		 
-		 return String.format("Employee name:" + getName()+"\nEmployee salary: " + getSalary() + "\nEmployee Work Hours: " +getWorkHours()+ "\nEmployee Hire Year: " + getHireYear()+"\nBonus: " + bonus() + "\nRaise Salary: " + raiseSalary() + "\nTax: " + tax()   + "\nTotal Salary: " + (salary - tax() + bonus() + raiseSalary()) + "\nsalaryWithTax: " + (salary + bonus() + raiseSalary()));
+		 return String.format("Employee name:" + getName()+"\nEmployee salary: " + getSalary() + "\nEmployee Work Hours: " +getWorkHours()+ "\nEmployee Hire Year: " + getHireYear()+"\nBonus: " + bonus() + "\nRaise Salary: " + raiseSalary() + "\nTax: " + tax()   + "\nSalary with tax and bonus: " + (salary - tax() + bonus() ) + "\nTotal Salary: " + (salary + bonus() - tax() + raiseSalary()));
 	 }
+	 
+	
 	 
 	 
 }
@@ -136,6 +140,14 @@ public class Employee {
 	  
 	  
 	  
+
+
+
+
+
+
+
+
 
 
 
